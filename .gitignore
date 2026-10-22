@@ -53,3 +53,9 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+# Compiled C/C++ executables
+/Bitwise Operators/bitwise_basics
+
+# VS Code local settings
+.vscode/
