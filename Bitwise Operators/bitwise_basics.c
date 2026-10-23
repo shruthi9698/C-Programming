@@ -1,7 +1,8 @@
+#include <stdio.h>
+
 //Set bit
 
-/*#include <stdio.h>
-int setBit(int n, int pos){
+/*int setBit(int n, int pos){
     return n | (1 << pos);
 }
 int main(){
@@ -9,11 +10,10 @@ int main(){
     int res = setBit(n, pos);
     printf("Result = %d", res);
     return 0;
-}*/
+}
 
 //Get bit
 
-#include <stdio.h>
 int getBit(int n, int pos)
 {
     return ((n & (1 << pos)) != 0);
@@ -22,6 +22,20 @@ int main()
 {
     int n = 5, pos = 1;
     int res = getBit(n, pos);
+    printf("Result = %d", res);
+    return 0;
+}*/
+
+//Clear bit
+
+int clearBit(int n, int pos)
+{
+    return n & (~(1 << pos));
+}
+int main()
+{
+    int n = 5, pos = 0;
+    int res = clearBit(n, pos);
     printf("Result = %d", res);
     return 0;
 }
