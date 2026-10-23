@@ -38,7 +38,7 @@ int main()
     int res = clearBit(n, pos);
     printf("Result = %d", res);
     return 0;
-}*/
+}
 
 //Update bit (clear bit + set bit)
 
@@ -52,6 +52,20 @@ int main()
 {
     int n =5, pos = 1, value = 1;
     int res = updateBit(n, pos, value);
+    printf("Result = %d", res);
+    return 0;
+}*/
+
+//Toggle bit
+
+int toggleBit(int n, int pos)
+{
+    return (n ^ (1 << pos));
+}
+int main()
+{
+    int n =5, pos = 1;
+    int res = toggleBit(n, pos);
     printf("Result = %d", res);
     return 0;
 }
