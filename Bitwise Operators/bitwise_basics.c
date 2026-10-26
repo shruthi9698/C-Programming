@@ -54,7 +54,7 @@ int main()
     int res = updateBit(n, pos, value);
     printf("Result = %d", res);
     return 0;
-}*/
+}
 
 //Toggle bit
 
@@ -67,5 +67,26 @@ int main()
     int n =5, pos = 1;
     int res = toggleBit(n, pos);
     printf("Result = %d", res);
+    return 0;
+}*/
+
+//Count set bits
+int countBits(unsigned int n)
+{
+    int count = 0;
+    while(n)
+    {
+        count++;
+        n = n & (n - 1);
+    }
+    return count;
+}
+int main()
+{
+    unsigned int n;
+    printf("Enter the number: ");
+    scanf("%d", &n);
+    int res = countBits(n);
+    printf("%d", res);
     return 0;
 }
