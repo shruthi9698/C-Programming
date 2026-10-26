@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <stdint.h>
 //Set bit
 
 /*int setBit(int n, int pos){
@@ -85,11 +85,11 @@ int main()
 {
     unsigned int n;
     printf("Enter the number: ");
-    scanf("%d", &n);
+    scanf("%u", &n);
     int res = countBits(n);
-    printf("%d", res);
+    printf("%u", res);
     return 0;
-}*/
+}
 
 //Swap Bits
 
@@ -109,4 +109,24 @@ int main()
     swapBits(&x, &y);
     printf("After swap:  x = %d, y = %d\n", x, y);
     return 0;
+}*/
+
+//Power of 2
+
+int powerOfTwo(uint32_t n){
+    return n != 0 && (n & (n - 1)) == 0;
+}
+int main()
+{
+    uint32_t n;
+    printf("Enter the number: ");
+    scanf("%u", &n);
+    if(powerOfTwo(n))
+    {
+        printf("%u is a power of two\n", n); 
+    } 
+    else{ 
+    printf("%u is not a power of two\n", n); 
+    } 
+    return 0; 
 }
