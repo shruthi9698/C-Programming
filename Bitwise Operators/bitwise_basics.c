@@ -68,7 +68,7 @@ int main()
     int res = toggleBit(n, pos);
     printf("Result = %d", res);
     return 0;
-}*/
+}
 
 //Count set bits
 int countBits(unsigned int n)
@@ -88,5 +88,25 @@ int main()
     scanf("%d", &n);
     int res = countBits(n);
     printf("%d", res);
+    return 0;
+}*/
+
+//Swap Bits
+
+void swapBits(int *a, int *b)
+{
+    if(*a != *b) // if(a != b) - checks the address
+    {
+        *a = *a ^ *b;
+        *b = *b ^ *a;
+        *a = *a ^ *b;
+    }
+}
+int main()
+{
+    int x = 5, y = 5;
+    printf("Before swap: x = %d, y = %d\n", x, y);
+    swapBits(&x, &y);
+    printf("After swap:  x = %d, y = %d\n", x, y);
     return 0;
 }
